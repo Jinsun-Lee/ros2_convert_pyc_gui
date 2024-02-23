@@ -1,2 +1,2 @@
 # convert_pyc
-dll로 변환 전 pyc 파일 관리 및 정리하는 파이썬 코드
+print_all_folder.py 파일의 기능을 convert_dll.py 파일처럼 GUI화 하기
