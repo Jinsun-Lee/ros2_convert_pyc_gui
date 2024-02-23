@@ -67,10 +67,9 @@ Button(root, text="Update Path", command=update_custom_path).pack()
 
 
 # 폴더 선택 버튼과 경로 표시 레이블
-#tk.Button(root, text="Browse Folder", command=browse_folder).pack(pady=10)
 path_var = tk.StringVar()
 path_var.set(ros_ws_path)
-#tk.Label(root, textvariable=path_var).pack()
+
 
 # 폴더 리스트 박스와 스크롤바
 frame = tk.Frame(root)
