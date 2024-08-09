@@ -1,21 +1,8 @@
-# convert_pyc
-
+# pyc 파일 만드는 방법
 ```
 cd
 cd /home/jinsunlee/ros2_ws/src/load_img/load_img/lib
 
 python3 -m compileall .
 ```
-위의 명령어는 걍 전체 컴파일   
-컴파일하고 알려준대로 옮기면 됨   
-
-</br> 
-
-# TODO
-```
-python3 print_all_folder.py
-```
-현재 위의 명령어 실행 시 ros2_ws/src 경로 안에 있는 패키지들을 읽어서, 우리 마이크로서비스 파일을 컴파일하고 옮기게끔 작성해 둠
-자세한 건 코드 열어서 주석 보면 됨
-</br>  
-</br>
+위의 명령어를 실행하면 해당 경로의 파일을 전부 컴파일함  
