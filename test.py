@@ -15,10 +15,10 @@ def on_select(event):
     selected_index = folder_listbox.curselection()
     if selected_index:
         selected_folder = folder_listbox.get(selected_index)
-        selected_folder_path = os.path.join(custom_path_var.get(), selected_folder)
-        messagebox.showinfo("Selected Folder", f"You selected: {selected_folder_path}")
-        # 선택한 폴더를 대상으로 lib 처리 함수 호출
-        final(selected_folder_path)
+        selected_folder_var.set(selected_folder)
+        confirm = messagebox.askquestion("Confirm", f"Do you want to process the folder '{selected_folder}'?", icon='question')
+        if confirm == 'yes':
+            process_selected_folder()
 
 def update_folder_list(path):
     folder_listbox.delete(0, tk.END)
@@ -39,6 +39,15 @@ def update_custom_path():
         update_folder_list(custom_path)
     else:
         messagebox.showerror("Invalid Path", "The specified path does not exist.")
+
+def process_selected_folder():
+    selected_folder = selected_folder_var.get()
+    if not selected_folder:
+        messagebox.showerror("No Folder Selected", "Please select a folder first.")
+        return
+    
+    selected_folder_path = os.path.join(custom_path_var.get(), selected_folder)
+    final(selected_folder_path)
 
 # lib 폴더 처리 함수들
 def is_folder_exist(folder_path):
@@ -89,7 +98,6 @@ def move_pycache_to_lib(folder, subfolder_path, chk_subfolder_path):
 def final(path):
     folders = get_folder_list(path)
     for folder in folders:
-        # 선택된 폴더의 "lib" 하위 폴더로 경로 설정
         subfolder_path = os.path.join(path, folder, "lib")
         chk_subfolder_path = is_folder_exist(subfolder_path)
         
@@ -107,6 +115,9 @@ root.title("ROS2 Workspace Folder List GUI")
 # 사용자 홈 디렉토리 및 ROS2_WS 경로 설정
 user_home = os.path.expanduser("~")
 ros_ws_path = os.path.join(user_home, 'ros2_ws', 'src')
+
+# 선택한 폴더를 저장할 변수
+selected_folder_var = StringVar()
 
 # 경로 수정을 위한 Entry와 확인 버튼
 custom_path_var = StringVar()
