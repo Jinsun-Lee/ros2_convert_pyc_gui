@@ -1,3 +1,23 @@
+<details><summary>pyc 파일 생성 방법 정리(test.py 파일과 무관)</summary>
+
+Python 스크립트를 실행하면 `__pycache__` 아래에 자동으로 .pyc 파일이 생성
+```
+python3 test.py
+```
+
+.pyc 파일은 아래 명령어를 사용해서 수동 생성이 가능
+```
+python3 -m py_compile test.py
+```
+
+현재 위치한 경로의 파일을 모두 컴파일하고 싶다면 아래 명령어를 사용(폴더 전체 컴파일)
+```
+python3 -m compileall .
+```
+</details>
+
+<br>
+
 ### 초기화면
 ![스크린샷 2024-08-09 12-32-07](https://github.com/user-attachments/assets/60d36fc0-5df1-4504-9dd1-281222024617)
 
