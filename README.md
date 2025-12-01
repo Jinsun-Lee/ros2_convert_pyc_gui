@@ -1,6 +1,6 @@
 # 설명  
 How to use pyc files for python nodes in ROS2 Humble.     
-ROS2 Humble 환경에서 Python 노드에 **pyc 파일을 활용하는 방법**을 정리한 레포지토리입니다.  
+ROS2 Humble 환경에서 Python 노드의 .py 파일을 .pyc로 변환하고, 노드에서 pyc 파일을 활용하는 방법을 정리한 저장소입니다.  
 
 <br>
 
