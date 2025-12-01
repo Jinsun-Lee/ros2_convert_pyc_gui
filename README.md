@@ -7,7 +7,7 @@ ROS2 Humble 환경에서 Python 노드에 **pyc 파일을 활용하는 방법**�
 --- 
 
 ### 1. 레포지토리 다운로드
-```
+```py
 cd Desktop
 git clone https://github.com/Jinsun-Lee/ros2_convert_pyc_gui.git convert_pyc
 ```
@@ -16,7 +16,7 @@ git clone https://github.com/Jinsun-Lee/ros2_convert_pyc_gui.git convert_pyc
 
 ### 2. pyc 파일 생성 — test.py 설명
 추가 설명: [1. pyc 파일 생성을 위한 test.py 동작 설명](https://github.com/Jinsun-Lee/ros2_convert_pyc_gui/blob/master/docs/1_pyc_%ED%8C%8C%EC%9D%BC_%EC%83%9D%EC%84%B1%EC%9D%84_%EC%9C%84%ED%95%9C_test_py_%EB%8F%99%EC%9E%91_%EC%84%A4%EB%AA%85.md)
-```
+```py
 cd convert_pyc
 python3 test.py
 ```
@@ -30,8 +30,8 @@ python3 test.py
 <br>  
 
 ### 3. pyc 파일 사용 — test2.py 설명
-추가 설명: https://youtu.be/mgs05eKuSv0
-```
+추가 설명: [2. pyc 파일 import해서 사용하는 방법](https://github.com/Jinsun-Lee/ros2_convert_pyc_gui/blob/master/docs/README.md) + [비디오](https://youtu.be/mgs05eKuSv0)
+```py
 cd convert_pyc
 python3 test2.py
 ```
